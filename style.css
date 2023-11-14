@@ -1,0 +1,28 @@
+*{
+    padding:0;
+    margin:0;
+    border:0;
+    box-sizing: border-box;
+    font-family: Noto Sans Mono, sans-serif;
+}
+.page{
+    width:100vw;
+    height:100%;
+}
+.logo img{
+    width:70px;
+    height:20px;
+    margin-top:40px;
+}
+.left-hero{
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-image: url(assets/img-1.png); */
+    left:0px;
+    height:100%;
+    width:50vw;
+    ;
+}
