@@ -42,7 +42,7 @@
     display: flex;
 }
 .hero-left{
-   position: relative;
+   /* position: relative;  */
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -73,10 +73,106 @@
     object-fit: cover;
 }
 .left-text-container{
-    display:flex;
+    position: absolute;
+    display: flex;
     flex-direction: column;
-    margin-right:10px;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-end;
+    max-height: 100vh;
+    margin-top:40vh;
+    padding-right:50px;
+    padding-left:70px;
 
+}
+.left-hero-title,
+.left-hero-desc,
+button {
+    margin-bottom: 10px;
+    
+}
+
+.left-hero-title {
+    font-size: 24px;
+    color:white;
+    /* font-weight:0; */
+}
+
+.left-title-bg {
+    background-color: #222; 
+    padding: 5px 10px; 
+}
+.left-hero-desc{
+    color:white;
+    font-weight: 200;
+    padding-left:50px;
+    text-align: end;
+    margin-top:45px;
+    margin-bottom:40px;
+}
+.left-text-container button{
+    cursor:pointer;
+    width:140px;
+    height:40px;
+    text-align: center;
+    padding:7px 5px;
+    color:white;
+    background-color: #232323e6;
+    font-size:16px;
+    
+}
+
+.right-text-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-height: 100vh;
+    margin-top:40vh;
+    padding-right:70px;
+    padding-left:50px;
+
+}
+/* .right-hero-title,
+.right-hero-desc,
+button {
+    margin-bottom: 10px;
+    
+} */
+
+.right-hero-title {
+    font-size: 24px;
+    color:#232323e6;
+    margin-bottom: 10px;;
+    /* font-weight:0; */
+}
+
+.right-title-bg {
+    background-color: white; 
+    padding: 5px 10px; 
+}
+.job-ready{
+    color:white;
+    /* margin-top:40px; */
+    font-size:36px;
+}
+.right-hero-desc{
+    color:white;
+    font-weight: 200;
+    /* padding-left:30px; */
+    text-align: start;
+    padding-right:50px;
+    margin-top:30px;
+    margin-bottom:40px;
+}
+.right-text-container button{
+    cursor:pointer;
+    width:140px;
+    height:40px;
+    text-align: center;
+    padding:7px 5px;
+    color:#232323e6;
+    background-color: white;
+    font-size:16px;
+    
 }
