@@ -174,5 +174,71 @@ button {
     color:#232323e6;
     background-color: white;
     font-size:16px;
+}
+.section-2{
+    background-color: #f1f2f3;
+}
+.title-section {
+    display: flex;
+    margin: 70px;
+    align-items: center;
+    position: relative;
     
 }
+
+.arrow {
+    color: #28eea7;
+    font-size: 24px;
+    margin-right: 10px;
+    margin-left:40px;
+}
+
+.hello-world {
+    font-size: 24px;
+    color: #363738;
+    font-weight: 700;
+    margin-left: 10px; /* Adjusted margin-left to 0 */
+    margin-right:900px;
+}
+
+.circle-container-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 140px;
+}
+
+.circle-black,
+.circle-grey,
+.circle-green {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.circle-black {
+    background-color: #363738;
+}
+
+.circle-grey {
+    background-color: #DCDEE1;
+}
+
+.circle-green {
+    background-color:#28EEA7;
+}
+.video-container{
+    margin-top:40px;
+    width:726px;
+    height:408px;
+    border-radius: 5px;
+    border-color: #28EEA7;
+    left:100%
+}
+.video-container iframe{
+    border:15px solid  #28EEA7;
+    border-radius: 15px;
+    /* border-color: #28EEA7; */
+    margin-left:200px;
+}
+
