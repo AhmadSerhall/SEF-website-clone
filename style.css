@@ -227,18 +227,21 @@ button {
 .circle-green {
     background-color:#28EEA7;
 }
-.video-container{
-    margin-top:40px;
-    width:726px;
-    height:408px;
+.video-container {
+    margin-top: 40px;
+    width: 1200px;
+    height: 650px;
     border-radius: 5px;
-    border-color: #28EEA7;
-    left:100%
+    overflow: hidden; /* Ensure the border-radius is applied to the iframe */
+    position: relative; /* Positioning context for the iframe */
+    left:10vw;
+    margin-bottom:40px;
 }
-.video-container iframe{
-    border:15px solid  #28EEA7;
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 15px solid #28EEA7;
     border-radius: 15px;
-    /* border-color: #28EEA7; */
-    margin-left:200px;
+    margin: 0; /* Remove margin for full-width iframe */
 }
 
