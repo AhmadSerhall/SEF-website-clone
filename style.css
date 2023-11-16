@@ -586,7 +586,7 @@ padding:15px;
     margin-left: 10px; /* Adjusted margin-left to 0 */
     margin-right:900px;
 }
-#testimonials-container {
+/* #testimonials-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -630,4 +630,116 @@ padding:15px;
 
 .active {
     background-color: #333;
+} */
+.section-7{
+    background-color: #363738;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.faq{
+    color:#fcfcfd;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 10px; /* Adjusted margin-left to 0 */
+    margin-right:900px;
+    
+}
+.section-7 p{
+    color:white;
+    text-align:start;
+    font-size:17px;
+    background-color: #222;
+    width:70vw;
+    margin-bottom: 10px;
+    border-radius:10px;
+    padding:20px;
+  
+    
+}
+.section-7 p .highlight{
+    color:#28EEA7;
+}
+.section-7.view-all p{
+    text-align:end;
+    cursor:pointer;
+}
+.fas.fa-angle-down {
+    color: white;
+    font-size: 20px;
+}
+svg path {
+    fill: #fff; 
+    cursor:pointer;
+}
+
+.partners {
+    font-size: 24px;
+    color: #363738;
+    font-weight: 700;
+    margin-left: 10px; /* Adjusted margin-left to 0 */
+    margin-right:900px;
+    
+}
+.partners-container{
+    display:flex;
+    justify-content: space-around;
+    gap:100px;
+    align-items:center ;
+    flex-wrap: wrap;
+    margin-left:120px;
+    margin-right:110px;
+    margin-bottom:70px;
+
+}
+.partners-container img{
+    width:100px;
+    height: 100px;
+    /* kenit 130 */
+}
+.section-10{
+    background-color: #363738;
+}
+.subscribe-container{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:50px;
+    padding-left:40px;
+    
+}
+.subscribe-container p{
+    color:#fcfcfd;
+    font-size:18px;
+    padding-bottom:30px;
+    padding-left:100px;
+    
+}
+.subscribe-container p .highlight{
+    color:#28EEA7;
+}
+.subscribe-container input{
+    width:15vw;
+    height:45px;
+    font-size:14px;
+    padding-left:60px;
+    text-align: start;
+    padding-left:15px;
+    margin-left:350px;
+    color:#222;
+    background-color: #fff;
+    border:none;
+}
+.subscribe-container button{
+    height:45px;
+    margin-right:255px;
+    margin-top:10px;
+    color:#f1f2f3;
+    background-color:#232323;
+    text-align: center;
+    width:100px;
+    cursor:pointer;
+    font-weight: 900;
+    
 }

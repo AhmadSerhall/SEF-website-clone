@@ -33,30 +33,31 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //testimonials script
-const texts = ["Text 1", "Text 2", "Text 3", "Text 4"];
-    const images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"];
+// const texts = ["Text 1", "Text 2", "Text 3", "Text 4"];
+//     const images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"];
 
-    let currentIndex = 0;
-    const textElement = document.getElementById('text');
-    const imgElement = document.querySelector('#img-container img');
-    const points = document.querySelectorAll('.point');
+//     let currentIndex = 0;
+//     const textElement = document.getElementById('text');
+//     const imgElement = document.querySelector('#img-container img');
+//     const points = document.querySelectorAll('.point');
 
-    function updateContent() {
-        textElement.textContent = texts[currentIndex];
-        imgElement.src = images[currentIndex];
-        points.forEach((point, index) => {
-            point.classList.toggle('active', index === currentIndex);
-        });
+//     function updateContent() {
+//         textElement.textContent = texts[currentIndex];
+//         imgElement.src = images[currentIndex];
+//         points.forEach((point, index) => {
+//             point.classList.toggle('active', index === currentIndex);
+//         });
 
-        currentIndex = (currentIndex + 1) % texts.length;
-    }
+//         currentIndex = (currentIndex + 1) % texts.length;
+//     }
 
-    function changeContentAfterDelay() {
-        setInterval(updateContent, 2000);
-    }
+//     function changeContentAfterDelay() {
+//         setInterval(updateContent, 2000);
+//     }
 
-    // Initial content update
-    updateContent();
+//     // Initial content update
+//     updateContent();
 
-    // Start the interval after 2 seconds
-    setTimeout(changeContentAfterDelay, 2000);
+//     // Start the interval after 2 seconds
+//     setTimeout(changeContentAfterDelay, 2000);
+
