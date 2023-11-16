@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const tabs = document.querySelectorAll('.tab');
-    const contentContainer = document.getElementById('content-container');
+    const contents = document.querySelectorAll('.content');
 
     tabs.forEach(tab => {
         tab.addEventListener('click', function () {
@@ -23,24 +23,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateContent(tabName) {
         // Your content updates based on the selected tab
-        const textContent = document.querySelector('.text-content');
-        const imageContainer = document.querySelector('.image-container img');
-
-        if (tabName === 'fcs') {
-            textContent.innerHTML = '<h2>FCS: Your Content</h2><p>Details about FCS.</p>';
-            imageContainer.src = './assets/fcs.png';
-            contentContainer.style.backgroundColor = '#FFCC33';
-        } else if (tabName === 'fsw') {          
-            imageContainer.src = './assets/fsw.png';
-            contentContainer.style.backgroundColor = '#28EEA7';
-        } else if (tabName === 'fsd') {
-            textContent.innerHTML = '<h2>FSD: Your Content</h2><p>Details about FSD.</p>';
-            imageContainer.src = './assets/fsd.png';
-            contentContainer.style.backgroundColor = '#9864da';
-        } else if (tabName === 'uix') {
-            textContent.innerHTML = '<h2>UIX: Your Content</h2><p>Details about UIX.</p>';
-            imageContainer.src = './assets/uix.png';
-            contentContainer.style.backgroundColor = '#fb508e';
-        }
+        contents.forEach(content => {
+            content.style.display = 'none'; // Hide all content by default
+            if (content.getAttribute('data-tab') === tabName) {
+                content.style.display = 'block'; // Show the content for the selected tab
+            }
+        });
     }
 });
+
+//testimonials script
+const texts = ["Text 1", "Text 2", "Text 3", "Text 4"];
+    const images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"];
+
+    let currentIndex = 0;
+    const textElement = document.getElementById('text');
+    const imgElement = document.querySelector('#img-container img');
+    const points = document.querySelectorAll('.point');
+
+    function updateContent() {
+        textElement.textContent = texts[currentIndex];
+        imgElement.src = images[currentIndex];
+        points.forEach((point, index) => {
+            point.classList.toggle('active', index === currentIndex);
+        });
+
+        currentIndex = (currentIndex + 1) % texts.length;
+    }
+
+    function changeContentAfterDelay() {
+        setInterval(updateContent, 2000);
+    }
+
+    // Initial content update
+    updateContent();
+
+    // Start the interval after 2 seconds
+    setTimeout(changeContentAfterDelay, 2000);
