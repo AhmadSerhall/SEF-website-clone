@@ -20,21 +20,22 @@
 .nav-bar{
     display: flex;
     align-items: center;
-    height: 8vh;
+    height: 10vh;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 60px;
     position: absolute; 
     top: 0; 
     left: 0;
 }
 .nav-bar img{
-    margin-top:30px;
-    margin-left:20px;
+    /* margin-top:30px;
+    margin-left:20px; */
+    margin-left:140px;
     width:14vw;
     height:100%;
     cursor: pointer;
     vertical-align: middle;
-    padding:12px 20px;
+    padding:12px 12px;
     
     
 }
@@ -50,14 +51,39 @@
     left:0px;
     height:100%;
     width:50%;
-    ;
+    overflow: hidden; /* Ensure the color animation doesn't overflow */
+
 }
+
+  
+  /* Add a smooth transition effect */
+  
+/* adding the text and cursor blink */
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background-color: #fff;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
 .hero-left img{
     
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:cover;
+    
 }
+
 .hero-right{
     display:flex;
     flex-direction: column;
@@ -71,6 +97,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
 }
 .left-text-container{
     position: absolute;
@@ -207,7 +234,7 @@ button {
 .circle-container-wrapper {
     display: flex;
     align-items: center;
-    margin-right: 140px;
+    margin-right: 100px;
 }
 
 .circle-black,
@@ -254,7 +281,7 @@ button {
 width:60vw;
 height:auto;
 margin-left:100px;
-margin-right:30px;
+/* margin-right:30px; */
 background-color: #f1f2f3;
 border-radius: 15px;
 padding:15px;
@@ -282,12 +309,14 @@ padding:15px;
 }
 .right-milestone-container{
     display:flex;
-    justify-content:space-around; 
+    justify-content:flex-start; 
     /* hon kenit space-around */
     align-items: start;
     flex-wrap: wrap;
-    padding-right:200px;
-    
+    /* padding-right:200px; */
+    margin-right:20px;
+    margin-left:20px;
+    gap:15px;
 }
 .youth-trained{
     width:22vw;
@@ -295,8 +324,9 @@ padding:15px;
     background-color: #f1f2f3;
     border-radius: 15px;
     height:auto;
-    margin-right:20px;
-    margin-left:5px;
+    
+    margin-right:5px;
+    /* margin-left:5px; */
 }
 .youth-trained h1{
     font-size:64px;
@@ -317,10 +347,12 @@ padding:15px;
     background-color: #f1f2f3;
 }
  .hiring-countries{
-    margin-left:0px;
+    
+    background-color: #f1f2f3;
     border-radius:15px;
-    width:15vw;
+    width:200px;
     height:auto;
+    
 } 
 .youth-trained h1,
 .hiring-countries h1,
@@ -340,11 +372,21 @@ padding:15px;
     padding-bottom: 30px;
     padding-left:5px;
 }
-.youth-trained ,
-.hiring-countries ,
-.graduated ,
-.partner-companies{
+
+.graduated{
+    background-color: #f1f2f3;
     border-radius:15px;
+    width:300px;
+    height:auto;
+    padding-left:20px;
+}
+.partner-companies{
+    background-color: #f1f2f3;
+    border-radius:15px;
+    width:300px;
+    height:auto;
+    padding-left:15px;
+    margin-left:1px;
 }
 .section-4{
     background-color: #28EEA7;
@@ -463,6 +505,7 @@ padding:15px;
     width: 30%;
     height:370px;
     overflow-y: hidden;
+    
 }
 
 .image-container img {
@@ -742,4 +785,25 @@ svg path {
     cursor:pointer;
     font-weight: 900;
     
+}
+.final-section{
+    background-color: #222;
+    padding:60px;
+}
+.footer-content{
+    display:flex;
+    justify-content: flex-start;
+
+}
+.left-footer-content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.left-footer-content span{
+    cursor:pointer;
+}
+.left-footer-content span :hover{
+    color:white;
 }

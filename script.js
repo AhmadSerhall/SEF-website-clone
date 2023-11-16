@@ -1,3 +1,92 @@
+// Get the hero-left container
+const heroLeftContainer = document.getElementById("hero-left");
+
+// Create a pseudo-element for color animation
+const colorAnimationPseudoElement = document.createElement("div");
+colorAnimationPseudoElement.classList.add("color-animation-container");
+
+// Append the pseudo-element to the hero-left container
+heroLeftContainer.appendChild(colorAnimationPseudoElement);
+
+// Set the color animation properties
+colorAnimationPseudoElement.style.animation = "colorBlink 6s infinite";
+colorAnimationPseudoElement.style.backgroundColor = "#28EEA7";
+
+// Define the color animation keyframes
+const keyframes = `
+  @keyframes colorBlink {
+    0%, 10%, 60%, 70% {
+      background-color: #28EEA7;
+    }
+    20%, 30%, 80%, 90% {
+      background-color: #9864da;
+    }
+    40%, 50%, 100% {
+      background-color: #fb508e;
+    }
+  }
+`;
+
+// Create a style element, set the keyframes, and append it to the document head
+const styleElement = document.createElement("style");
+styleElement.type = "text/css";
+styleElement.appendChild(document.createTextNode(keyframes));
+document.head.appendChild(styleElement);
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const words = ["Software Engineer ?", "UI/UX Designer ?", "Data Engineer ?"];
+    const textChangeElement = document.getElementById("text-change");
+  
+    function updateText() {
+      let currentWordIndex = 0;
+  
+      function changeWord() {
+        let currentWord = words[currentWordIndex];
+        let i = 0;
+  
+        function typeLetter() {
+          textChangeElement.textContent = currentWord.slice(0, i);
+          i++;
+  
+          if (i <= currentWord.length) {
+            setTimeout(typeLetter, 100);
+          } else {
+            setTimeout(backtrack, 2000);
+          }
+        }
+  
+        typeLetter();
+        currentWordIndex = (currentWordIndex + 1) % words.length;
+      }
+  
+      function backtrack() {
+        let currentWord = textChangeElement.textContent;
+        let i = currentWord.length;
+  
+        function deleteLetter() {
+          textChangeElement.textContent = currentWord.slice(0, i);
+          i--;
+  
+          if (i >= 0) {
+            setTimeout(deleteLetter, 50);
+          } else {
+            changeWord();
+          }
+        }
+  
+        deleteLetter();
+      }
+  
+      changeWord();
+    }
+  
+    updateText();
+  });
+  
 document.addEventListener('DOMContentLoaded', function () {
     const tabs = document.querySelectorAll('.tab');
     const contents = document.querySelectorAll('.content');
