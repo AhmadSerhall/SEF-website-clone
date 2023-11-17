@@ -36,8 +36,7 @@
     cursor: pointer;
     vertical-align: middle;
     padding:12px 12px;
-    
-    
+
 }
 .hero{
     display: flex;
@@ -212,6 +211,7 @@ button {
     display: flex;
     margin: 70px;
     align-items: center;
+    /* justify-content: space-between; */
     position: relative;
     
 }
@@ -228,13 +228,15 @@ button {
     color: #363738;
     font-weight: 700;
     margin-left: 10px; /* Adjusted margin-left to 0 */
-    margin-right:900px;
+    margin-right:1050px;
 }
 
 .circle-container-wrapper {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    margin-right: 100px;
+    margin-right: 110px;
+
 }
 
 .circle-black,
@@ -411,7 +413,7 @@ padding:15px;
     color: white;
     font-weight: 700;
     margin-left: -11px; /* Adjusted margin-left to 0 */
-    margin-right:900px;
+    margin-right:1050px;
     background-color: #363738;
     padding:10px;
 }
@@ -472,9 +474,6 @@ padding:15px;
 }
 
 .content-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
     padding: 40px;
     align-self: center;
    background-color: #363738;
@@ -485,16 +484,16 @@ padding:15px;
    
 }
 .content{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-wrap:wrap;
-    /* width:70%; */
+    display: flex;  
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:flex-start;
+    flex-wrap:nowrap; 
+    
 }
 
 .text-content {
-    width: 70%;
+    width:70%;
     color:#DCDEE1;
     padding-right:30px;
     font-size: 16px;
@@ -502,9 +501,12 @@ padding:15px;
 }
 
 .image-container {
-    width: 30%;
+    
     height:370px;
     overflow-y: hidden;
+
+    width:30%;
+    
     
 }
 
@@ -542,7 +544,7 @@ padding:15px;
     font-size: 24px;
     font-weight: 700;
     margin-left: 10px; /* Adjusted margin-left to 0 */
-    margin-right:900px;
+    margin-right:1050px;
 }
 .hire-container{
     display:flex;
@@ -627,7 +629,7 @@ padding:15px;
     color: #363738;
     font-weight: 700;
     margin-left: 10px; /* Adjusted margin-left to 0 */
-    margin-right:900px;
+    margin-right:1050px;
 }
 /* #testimonials-container {
     display: flex;
@@ -685,8 +687,8 @@ padding:15px;
     color:#fcfcfd;
     font-size: 24px;
     font-weight: 700;
-    margin-left: 10px; /* Adjusted margin-left to 0 */
-    margin-right:900px;
+    /* margin-left: 10px;  */
+    margin-right:1050px;
     
 }
 .section-7 p{
@@ -722,13 +724,13 @@ svg path {
     color: #363738;
     font-weight: 700;
     margin-left: 10px; /* Adjusted margin-left to 0 */
-    margin-right:900px;
+    margin-right:1050px;
     
 }
 .partners-container{
     display:flex;
     justify-content: space-around;
-    gap:100px;
+    gap:140px;
     align-items:center ;
     flex-wrap: wrap;
     margin-left:120px;
@@ -793,6 +795,8 @@ svg path {
 .footer-content{
     display:flex;
     justify-content: flex-start;
+    margin-left:50px;
+    gap:60px;
 
 }
 .left-footer-content{
@@ -800,10 +804,82 @@ svg path {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    gap:30px;
 }
-.left-footer-content span{
+.left-footer-content h2{
+    color:#DCDEE1;
+    font-size:14px;
+}
+.left-footer-content span a{
     cursor:pointer;
+    color:#A5A6A9;
+    text-decoration: none;
+    font-size:14px;
+    line-height:16px;
+    
 }
+
 .left-footer-content span :hover{
-    color:white;
+    color:#fcfcfd;
+}
+.second-left-footer-content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:20px;
+    margin-top:87px;
+    margin-right:1000px;
+}
+.second-left-footer-content span a{
+    cursor:pointer;
+    color:#A5A6A9;
+    text-decoration: none;
+    font-size:14px;
+    line-height:16px;
+}
+.second-left-footer-content span a:hover{
+    color:#fcfcfd;
+}
+.right-footer-content{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+.right-footer-content img{
+    width:100px;
+    height:100px;
+}
+.socials{
+    display:flex;
+    justify-content: end;
+    align-items: center;
+    gap:20px;
+   
+    
+    
+}
+.socials img{
+    width:30px;
+    height:30px;
+    background-color: #a5a6a9;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+.rights-reserved{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:200px;
+}
+.rights-reserved span{
+    color:#A5A6A9;
+    margin-left:55px;
+}
+
+.rights-reserved a{
+    text-decoration: none;
+    color:#A5A6A9;
+
 }

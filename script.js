@@ -150,3 +150,49 @@ document.addEventListener('DOMContentLoaded', function () {
 //     // Start the interval after 2 seconds
 //     setTimeout(changeContentAfterDelay, 2000);
 
+document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.tab');
+    const contentContainer = document.getElementById('content-container');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+            // Remove the 'active' class from all tabs
+            tabs.forEach(t => t.classList.remove('active'));
+
+            // Add the 'active' class to the clicked tab
+            this.classList.add('active');
+
+            // Get the data-tab attribute value
+            const tabName = this.getAttribute('data-tab');
+
+            // Call a function to update content based on the selected tab
+            updateContent(tabName);
+        });
+    });
+
+    // Default tab is FSW
+    updateContent('fsw');
+
+    function updateContent(tabName) {
+        // Your content updates based on the selected tab
+        
+        const imageContainer = document.querySelector('.image-container img');
+
+        if (tabName === 'fcs') {
+            
+            imageContainer.src = './assets/fcs.png';
+            contentContainer.style.backgroundColor = '#FFCC33';
+        } else if (tabName === 'fsw') {          
+            imageContainer.src = './assets/fsw.png';
+            contentContainer.style.backgroundColor = '#28EEA7';
+        } else if (tabName === 'fsd') {
+            
+            // imageContainer.src = './assets/fsd.png';
+            contentContainer.style.backgroundColor = '#9864da';
+        } else if (tabName === 'uix') {
+            
+            // imageContainer.src = './assets/uix.png';
+            contentContainer.style.backgroundColor = '#fb508e';
+        }
+    }
+});
